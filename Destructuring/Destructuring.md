@@ -67,5 +67,45 @@ Mas com o destructuring podemos fazer assim:
 Outro truque da desestruturação é que quando uma função retorna um array, podemos desestrutura-lo imediatamente.
 
 ```javascript
-const 
+const dadosAluno = {
+    nome: "Isabellla",
+    nota1: 9.5,
+    nota2: 8.0,
+    calcularMedia: function (){
+        this.media = (this.nota1 + this.nota2)/2;
+        return [this.nota1,this.nota2,this.media];
+    }
+}
+
+// Isto nos retorna um array
+console.log(dadosAluno.calcularMedia()); 
+
+// Isto faz a desestruturação e atribui cada resultado retornado a uma variável 
+const [n1,n2,media] = dadosAluno.calcularMedia();
+console.log(n1,n2,media);
+```
+
+## Destructuring de arrays aninhados
+
+Para fazer a desestruturação em arrays aninhados, basta fazer um destructuring dentro de um destructuring.
+
+
+```javascript
+const arr = [2,3,[4,5]];
+const [a,b,[c,d]] = arr;
+console.log(a,b,c,d);
+```
+
+## Definindo valores padrões
+
+Para o caso de não saber o comprimento do array, podemos definir valores padrões para as variáveis ao desestrutura-las.
+
+```javascript
+const arr = [4,5];
+
+var [a,b,c] = arr;
+console.log(a,b,c); // Aqui, a variável c retornaria undefined
+
+var [a=1,b=1,c=1] = arr;
+console.log(a,b,c); // Já aqui, a variável c retorna 1
 ```

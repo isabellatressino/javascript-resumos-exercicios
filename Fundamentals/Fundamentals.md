@@ -41,6 +41,7 @@ Para usar o modo restrito basta escrever:
 
 ```javascript
 "use strict";
+```
 
 ## Functions
 

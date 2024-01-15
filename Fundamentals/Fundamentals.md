@@ -21,7 +21,7 @@ Existem 7 tipos de dados primitivos:
 Para saber o tipo de dado armazenado em uma variável:
 
 ```javascript
-let nome = "Isabella"
+let nome = "Isabella";
 console.log(typeof nome);
 ```
 
@@ -50,38 +50,38 @@ Função é um pedaço de código que podemos reutilizar continuamente em nosso 
 ### Declaração de função:
 
 ```javascript
-function nomeDaFuncao(parametros){
-    //corpo da função
-    return resultado; // opcional
+function nomeDaFuncao(parametros) {
+	//corpo da função
+	return resultado; // opcional
 }
 ```
 
 ### Expressão de função:
 
 ```javascript
-const nomedaFuncao =  function (parametros){
-    //corpo da função
-    return resultado; // opcional
-}
+const nomedaFuncao = function (parametros) {
+	//corpo da função
+	return resultado; // opcional
+};
 ```
 
 As principais diferenças são que:
 
 1.  funções declaradas são elevadas para o topo do contexto de execução, e por isso podem ser chamadas antes de sua declaração no código, já no segundo caso não.
-2. Expressões de funções são armazenadas em uma variável, facilitando passa-la como argumento para outra função.
+2.  Expressões de funções são armazenadas em uma variável, facilitando passa-la como argumento para outra função.
 
 ### Arrow functions
 
 As arrow functions foram introduzidas no ES6. Elas proporcionam uma sintaxe mais consisa e curta para a criação de funções.
 
 ```javascript
-const nomedaFuncao =  parametro => retorno;
+const nomedaFuncao = (parametro) => retorno;
 ```
 
 ```javascript
-const nomedaFuncao =  (param1,param2) => {
-    //corpo da função
-}
+const nomedaFuncao = (param1, param2) => {
+	//corpo da função
+};
 ```
 
 ## Arrays
@@ -90,15 +90,15 @@ São estruturas de dados no qual podemos armazenar variáveis e acessá-las.
 
 ### Métodos
 
-|     Método        |     Descrição     |
-|:-----------------:|:-----------------:|
-| length            | retorna o comprimento do array |
-| push              | adiciona elementos no final do array |
-| unshift           | adiciona elementos no incio do array |
-| pop               | remove o último elemento do array |
-| shift             | remove o primeiro elemento do array |
-| indexOf(elemento) | mostra o índice do elemento |
-| includes(elemento)| retorna uma valor booleano se o elemento está ou não no array |
+|       Método       |                           Descrição                           |
+| :----------------: | :-----------------------------------------------------------: |
+|       length       |                retorna o comprimento do array                 |
+|        push        |             adiciona elementos no final do array              |
+|      unshift       |             adiciona elementos no incio do array              |
+|        pop         |               remove o último elemento do array               |
+|       shift        |              remove o primeiro elemento do array              |
+| indexOf(elemento)  |                  mostra o índice do elemento                  |
+| includes(elemento) | retorna uma valor booleano se o elemento está ou não no array |
 
 ## Objects
 
@@ -106,8 +106,8 @@ São estruturas definidas por pares de chave:valor.
 
 ```javascript
 const nomeObjeto = {
-    chave1: valor1,
-    chave2: valor2
+	chave1: valor1,
+	chave2: valor2,
 };
 ```
 
@@ -117,8 +117,8 @@ Existem duas maneiras de acessar uma propriedade de um objeto:
 
 ```javascript
 const notas = {
-    nota1: 9.5,
-    nota2: 7.5
+	nota1: 9.5,
+	nota2: 7.5,
 };
 
 console.log(notas.nota1);
@@ -128,8 +128,8 @@ console.log(notas.nota1);
 
 ```javascript
 const notas = {
-    nota1: 9.5,
-    nota2: 7.5
+	nota1: 9.5,
+	nota2: 7.5,
 };
 
 console.log(notas["nota1"]);
@@ -141,14 +141,13 @@ A palavra-chave faz referência ao objeto no qual o método é chamado.
 
 ```javascript
 const notas = {
-  nota1: 9.5,
-  nota2: 7.5,
-  media: function () {
-    let soma = this.nota1 + this.nota2;
-    return soma / 2;
-  },
+	nota1: 9.5,
+	nota2: 7.5,
+	media: function () {
+		let soma = this.nota1 + this.nota2;
+		return soma / 2;
+	},
 };
 
 console.log(notas.media());
 ```
-

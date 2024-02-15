@@ -65,3 +65,93 @@ Por esse motivo, elas possuem as seguintes características:
 ## Higher-order functions
 
 São funções que podem aceitar outras funções como argumentos e/ou retornar funções como resultado.
+
+# Métodos
+
+Normalmente, quando chamamos uma função, o valor this dentro da função é o objeto no qual a função foi acessada.
+
+Se tivessemos um objeto `lufthansa` com o método `book`:
+
+```javascript
+const lufthansa = {
+	airline: "Lufthansa",
+	iataCode: "LH",
+	bookings: [],
+	book(flightNum, name) {
+		console.log(
+			`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+		);
+		this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+	},
+};
+```
+
+E chamassemos o método, passando-lhe os parametros, isso iria funcionar perfeitamente, já que no contexto em que foi chamada, a palavra-chave this aponta para o objeto.
+
+```javascript
+lufthansa.book(239, "Jonas");
+lufthansa.book(635, "John Smith");
+```
+
+Entretanto, se armazenássemos o método book em uma variável e tentássemos chamá-lo, isso resultaria em um erro, pois a palavra-chave this não apontaria para o objeto em questão.
+
+```javascript
+const book = lufthansa.book;
+book(23, "Sarah Willians");
+```
+
+Para lidar com esse cenário, existem métodos em JavaScript que permitem especificar explicitamente a referência para a palavra-chave this.
+
+## Call
+
+O método `call()` permite que você chame a função com um determinado valor de contexto e uma lista de argumentos separados por vírgulas.
+
+```javascript
+funcao.call(contexto, argumento1, argumento2, ..., argumentoN)
+```
+
+- Função: A função à qual você deseja aplicar o método
+- Contexto: O valor a ser usado como o valor `this` quando a função é chamada.
+- Argumentos: Os argumentos que serão passados para a função.
+
+Assim, poderiamos resolver o problema anterior usando o método.
+
+```javascript
+const book = lufthansa.book;
+book.call(lufthansa, 23, "Sarah Willians");
+```
+
+## Apply
+
+O método `apply()` é bem parecido com o `call()`, mas ao invés de receber uma lista de argumentos, ele recebe um array.
+
+```javascript
+const book = lufthansa.book;
+const flightData = [538, "George Cooper"];
+book.apply(lufthansa, flightData);
+```
+
+Obs.: Ao inves de usar o `())`, poderiamos usar o `call()` com o `spread operator`:
+
+```javascript
+const book = lufthansa.book;
+const flightData = [538, "George Cooper"];
+book.call(lufthansa, ...flightData);
+```
+
+## Bind
+
+Assim como os outros métodos, `bind()` também é usado para definir a palavra-chave `this`. A diferença é que ele não chama a função imediatamente, mas sim retorna uma nova função.
+
+```javascript
+const novaFuncao = funcaoOriginal.bind(objeto);
+```
+
+- funcaoOriginal: A função original que você deseja vincular a um contexto específico.
+
+- objeto: O objeto que será usado como contexto (this) quando a nova função for chamada.
+
+```javascript
+const bookLH = book.bind(lufthansa);
+bookLH(23, "Sarah Willians");
+```

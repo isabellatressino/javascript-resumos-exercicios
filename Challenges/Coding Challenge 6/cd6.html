@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Coding Challenge 6</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(to top left, #a7cced, #63adf2);
+			}
+			button {
+				font: 25px bolder Verdana, sans-serif;
+				color: white;
+				background-color: #304d6d;
+				padding: 20px 50px;
+				border-radius: 10px;
+				border: none;
+				cursor: pointer;
+				transition: transform 0.2s;
+			}
+			button:active {
+				transform: scale(0.95);
+			}
+			button:hover {
+				background-color: #545e75;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="answer-poll">Answer poll</button>
+		<script src="cd6.js"></script>
+	</body>
+</html>

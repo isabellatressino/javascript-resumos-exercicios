@@ -131,7 +131,7 @@ const flightData = [538, "George Cooper"];
 book.apply(lufthansa, flightData);
 ```
 
-Obs.: Ao inves de usar o `())`, poderiamos usar o `call()` com o `spread operator`:
+Obs.: Ao inves de usar o `apply()`, poderiamos usar o `call()` com o `spread operator`:
 
 ```javascript
 const book = lufthansa.book;
@@ -155,3 +155,26 @@ const novaFuncao = funcaoOriginal.bind(objeto);
 const bookLH = book.bind(lufthansa);
 bookLH(23, "Sarah Willians");
 ```
+
+## Closures
+
+Uma closure é criada quando uma função é declarada dentro do corpo de outra função, permitindo que a função interna, tenha acesso às variáveis da função externa, mesmo depois que a execução da externa foi concluida.
+
+```javascript
+const secureBooking = function () {
+	let passengerCount = 0;
+
+	return function () {
+		passengerCount++;
+		console.log(`${passengerCount} passengers`);
+	};
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+```
+
+Assim, mesmo que a execução da função `secureBooking` já tenha sido concluida, a função `booker` ainda tem acesso à variável `passengerCount`.

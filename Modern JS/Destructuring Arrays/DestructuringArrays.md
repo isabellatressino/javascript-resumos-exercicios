@@ -68,13 +68,13 @@ Outro truque da desestruturação é que quando uma função retorna um array, p
 
 ```javascript
 const dadosAluno = {
-	nome: "Isabellla",
-	nota1: 9.5,
-	nota2: 8.0,
-	calcularMedia: function () {
-		this.media = (this.nota1 + this.nota2) / 2;
-		return [this.nota1, this.nota2, this.media];
-	},
+  nome: "Isabellla",
+  nota1: 9.5,
+  nota2: 8.0,
+  calcularMedia: function () {
+    this.media = (this.nota1 + this.nota2) / 2;
+    return [this.nota1, this.nota2, this.media];
+  },
 };
 
 // Isto nos retorna um array

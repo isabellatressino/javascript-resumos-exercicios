@@ -21,10 +21,10 @@ Em objetos, basta fazer o destructuring dando à variável o mesmo nome da propr
 
 ```javascript
 const aluno = {
-	nota1: 8.5,
-	nota2: 8.0,
-	nota3: 9.0,
-	media: 8.5,
+  nota1: 8.5,
+  nota2: 8.0,
+  nota3: 9.0,
+  media: 8.5,
 };
 
 const { media, ...notas } = aluno;
@@ -37,12 +37,12 @@ O uso do rest em funções é util para condensar os argumentos em um array quan
 
 ```javascript
 const add = function (...numbers) {
-	console.log(numbers);
-	let sum = 0;
-	for (let i = 0; i < numbers.length; i++) {
-		sum += numbers[i];
-	}
-	console.log(sum);
+  console.log(numbers);
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
 };
 
 add(2, 3);

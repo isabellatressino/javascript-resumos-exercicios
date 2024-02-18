@@ -8,15 +8,15 @@ Considere um array com todas as visitas recebidas em um site.
 
 ```javascript
 const visitas = [
-	"Isabella",
-	"Maria",
-	"Isabella",
-	"Giovanna",
-	"Mauro",
-	"João",
-	"Giovanna",
-	"Isabella",
-	"Maria",
+  "Isabella",
+  "Maria",
+  "Isabella",
+  "Giovanna",
+  "Mauro",
+  "João",
+  "Giovanna",
+  "Isabella",
+  "Maria",
 ];
 ```
 

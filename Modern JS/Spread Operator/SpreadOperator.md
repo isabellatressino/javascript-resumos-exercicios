@@ -24,9 +24,9 @@ Para um objeto funcionaria de forma semelhante.
 
 ```javascript
 const aluno = {
-	nome: "Isabella",
-	ra: 23013050,
-	curso: "Engenharia de Software",
+  nome: "Isabella",
+  ra: 23013050,
+  curso: "Engenharia de Software",
 };
 
 const alunoMedia = { ...aluno, media: 9 };
@@ -47,8 +47,8 @@ Considerando a função
 
 ```javascript
 const calcularMedia = (n1, n2, n3) => {
-	const media = (n1 + n2 + n3) / 3;
-	console.log(`A média das notas ${n1}, ${n2} e ${n3} é ${media}.`);
+  const media = (n1 + n2 + n3) / 3;
+  console.log(`A média das notas ${n1}, ${n2} e ${n3} é ${media}.`);
 };
 ```
 

@@ -4,7 +4,7 @@ O loop `for...of` é usado para percorrer os valores de um objeto iterável.
 
 ```javascript
 for (const elemento of iteravel) {
-	// Código a ser executado para cada elemento
+  // Código a ser executado para cada elemento
 }
 ```
 
@@ -18,7 +18,7 @@ Considere os sabores de suco de uma lanchonete. O array sucos pode ser iterado d
 const sucos = ["Abacaxi", "Frutas Vermelhas", "Laranja", "Limão", "Maracujá"];
 
 for (const item of sucos) {
-	console.log(item);
+  console.log(item);
 }
 ```
 
@@ -30,7 +30,7 @@ Se de algum modo precisarmos do valor dos indices de uma iteração, podemos usa
 const sucos = ["Abacaxi", "Frutas Vermelhas", "Laranja", "Limão", "Maracujá"];
 
 for (const item of sucos.entries()) {
-	console.log(`${item[0] + 1}: ${item[1]}`);
+  console.log(`${item[0] + 1}: ${item[1]}`);
 }
 ```
 
@@ -46,6 +46,6 @@ Como o método `entries()` nos retorna um array, podemos aplicar o `destructurin
 const sucos = ["Abacaxi", "Frutas Vermelhas", "Laranja", "Limão", "Maracujá"];
 
 for (const [i, suco] of sucos.entries()) {
-	console.log(`${i + 1}: ${suco}`);
+  console.log(`${i + 1}: ${suco}`);
 }
 ```

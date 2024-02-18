@@ -6,9 +6,9 @@ Considero o objeto pessoa:
 
 ```javascript
 const pessoa = {
-	nome: "Maria",
-	idade: 0,
-	endereco: "Rua do Sol, 27",
+  nome: "Maria",
+  idade: 0,
+  endereco: "Rua do Sol, 27",
 };
 
 // Com o operador OR

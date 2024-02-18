@@ -4,21 +4,21 @@ Considere o objeto:
 
 ```javascript
 const livro = {
-	titulo: "A mulher na janela",
-	autor: "A. J. Finn",
-	editora: "Arqueiro",
-	dataPublicação: 2018,
-	palavrasChave: ["suspense", "thriller", "mistério", "plot twist"],
-	paginas: 350,
-	idioma: "Português",
-	avaliacoes: {
-		numeroAvaliacoes: 1121,
-		umaEstrela: 15,
-		duasEstrelas: 12,
-		tresEstrelas: 219,
-		quatroEstrelas: 589,
-		cincoEstrelas: 286,
-	},
+  titulo: "A mulher na janela",
+  autor: "A. J. Finn",
+  editora: "Arqueiro",
+  dataPublicação: 2018,
+  palavrasChave: ["suspense", "thriller", "mistério", "plot twist"],
+  paginas: 350,
+  idioma: "Português",
+  avaliacoes: {
+    numeroAvaliacoes: 1121,
+    umaEstrela: 15,
+    duasEstrelas: 12,
+    tresEstrelas: 219,
+    quatroEstrelas: 589,
+    cincoEstrelas: 286,
+  },
 };
 ```
 
@@ -70,7 +70,7 @@ Para trabalhar com a desestruturação de objetos aninhados, basta fazer:
 
 ```javascript
 const {
-	avaliacoes: { quatroEstrelas },
+  avaliacoes: { quatroEstrelas },
 } = livro;
 console.log(quatroEstrelas);
 ```
@@ -83,15 +83,15 @@ Com a desestruturação, podemos passar um objeto como argumento e a função ir
 
 ```javascript
 const sobreLivro = ({ titulo, autor, dataPublicação, editora }) => {
-	console.log(
-		`O livro ${titulo} de ${autor} foi publicado em ${dataPublicação} pela editora ${editora}.`
-	);
+  console.log(
+    `O livro ${titulo} de ${autor} foi publicado em ${dataPublicação} pela editora ${editora}.`
+  );
 };
 
 sobreLivro({
-	titulo: "Coraline",
-	autor: "Neil Gaiman",
-	dataPublicação: 2002,
-	editora: "Harper",
+  titulo: "Coraline",
+  autor: "Neil Gaiman",
+  dataPublicação: 2002,
+  editora: "Harper",
 });
 ```

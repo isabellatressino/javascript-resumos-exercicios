@@ -28,7 +28,7 @@ Ele é util para definir valores padrão.
 
 ```javascript
 function saudacao(nome) {
-	console.log(`Olá ${nome || "Visitante"}! Como está você?`);
+  console.log(`Olá ${nome || "Visitante"}! Como está você?`);
 }
 
 saudacao("Isabella");
@@ -50,7 +50,7 @@ console.log(20 && 30); // 30
 
 ```javascript
 function dirigir() {
-	console.log("Legal! Você já pode dirigir.");
+  console.log("Legal! Você já pode dirigir.");
 }
 
 idade = 19;

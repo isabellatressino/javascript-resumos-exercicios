@@ -9,10 +9,10 @@
 ```javascript
 // quiz game
 const question = new Map([
-	["question", "What is the best programing language in the world?"],
-	[1, "C"],
-	[2, "Java"],
-	[3, "JavaScript"],
+  ["question", "What is the best programing language in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
 ]);
 ```
 
@@ -44,7 +44,7 @@ Podemos usar o loop `for..of` para iterar sobre um map.
 ```javascript
 console.log(question.get("question"));
 for (const [key, value] of question) {
-	if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
 }
 ```
 

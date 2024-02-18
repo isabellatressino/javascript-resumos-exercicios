@@ -51,8 +51,8 @@ Função é um pedaço de código que podemos reutilizar continuamente em nosso 
 
 ```javascript
 function nomeDaFuncao(parametros) {
-	//corpo da função
-	return resultado; // opcional
+  //corpo da função
+  return resultado; // opcional
 }
 ```
 
@@ -60,8 +60,8 @@ function nomeDaFuncao(parametros) {
 
 ```javascript
 const nomedaFuncao = function (parametros) {
-	//corpo da função
-	return resultado; // opcional
+  //corpo da função
+  return resultado; // opcional
 };
 ```
 
@@ -80,7 +80,7 @@ const nomedaFuncao = (parametro) => retorno;
 
 ```javascript
 const nomedaFuncao = (param1, param2) => {
-	//corpo da função
+  //corpo da função
 };
 ```
 
@@ -106,8 +106,8 @@ São estruturas definidas por pares de chave:valor.
 
 ```javascript
 const nomeObjeto = {
-	chave1: valor1,
-	chave2: valor2,
+  chave1: valor1,
+  chave2: valor2,
 };
 ```
 
@@ -117,8 +117,8 @@ Existem duas maneiras de acessar uma propriedade de um objeto:
 
 ```javascript
 const notas = {
-	nota1: 9.5,
-	nota2: 7.5,
+  nota1: 9.5,
+  nota2: 7.5,
 };
 
 console.log(notas.nota1);
@@ -128,8 +128,8 @@ console.log(notas.nota1);
 
 ```javascript
 const notas = {
-	nota1: 9.5,
-	nota2: 7.5,
+  nota1: 9.5,
+  nota2: 7.5,
 };
 
 console.log(notas["nota1"]);
@@ -141,12 +141,12 @@ A palavra-chave faz referência ao objeto no qual o método é chamado.
 
 ```javascript
 const notas = {
-	nota1: 9.5,
-	nota2: 7.5,
-	media: function () {
-		let soma = this.nota1 + this.nota2;
-		return soma / 2;
-	},
+  nota1: 9.5,
+  nota2: 7.5,
+  media: function () {
+    let soma = this.nota1 + this.nota2;
+    return soma / 2;
+  },
 };
 
 console.log(notas.media());

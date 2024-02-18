@@ -8,30 +8,30 @@ Considere o objeto restaurante.
 
 ```javascript
 const restaurant = {
-	name: "Classico Italiano",
-	location: "Via Angelo Tavanti 23, Firenze, Italy",
-	categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-	starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-	mainMenu: ["Pizza", "Pasta", "Risotto"],
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
 
-	openingHours: {
-		thu: {
-			open: 12,
-			close: 22,
-		},
-		fri: {
-			open: 11,
-			close: 23,
-		},
-		sat: {
-			open: 0, // Open 24 hours
-			close: 24,
-		},
-	},
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
 
-	order(starterIndex, mainIndex) {
-		return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-	},
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 ```
 
@@ -71,10 +71,10 @@ Podemos verificar se uma posição de array está vazia.
 
 ```javascript
 const users = [
-	{
-		name: "Jonas",
-		email: "jonas@exemple.com",
-	},
+  {
+    name: "Jonas",
+    email: "jonas@exemple.com",
+  },
 ];
 
 console.log(users[1]?.name ?? "User array empty");

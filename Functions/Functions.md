@@ -6,8 +6,8 @@ Função é um pedaço de código que podemos reutilizar continuamente em nosso 
 
 ```javascript
 function nomeDaFuncao(parametros) {
-	//corpo da função
-	return resultado; // opcional
+  //corpo da função
+  return resultado; // opcional
 }
 ```
 
@@ -15,8 +15,8 @@ function nomeDaFuncao(parametros) {
 
 ```javascript
 const nomedaFuncao = function (parametros) {
-	//corpo da função
-	return resultado; // opcional
+  //corpo da função
+  return resultado; // opcional
 };
 ```
 
@@ -28,9 +28,9 @@ Podemos definir valores padrão para inicializar parâmetros.
 
 ```javascript
 const somar = function (a, b) {
-	a = a || 1; // short-circuiting
-	b = b || 1;
-	return a + b;
+  a = a || 1; // short-circuiting
+  b = b || 1;
+  return a + b;
 };
 
 console.log(somar(5, 3)); // 8
@@ -43,7 +43,7 @@ console.log(somar()); // 2
 ```javascript
 // podemos atribuir o valor padrão diretamente nos paramêtros
 const somar = function (a = 1, b = 1) {
-	return a + b;
+  return a + b;
 };
 
 console.log(somar(5, 3)); // 8
@@ -74,15 +74,15 @@ Se tivessemos um objeto `lufthansa` com o método `book`:
 
 ```javascript
 const lufthansa = {
-	airline: "Lufthansa",
-	iataCode: "LH",
-	bookings: [],
-	book(flightNum, name) {
-		console.log(
-			`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
-		);
-		this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
-	},
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
 };
 ```
 
@@ -162,12 +162,12 @@ Uma closure é criada quando uma função é declarada dentro do corpo de outra 
 
 ```javascript
 const secureBooking = function () {
-	let passengerCount = 0;
+  let passengerCount = 0;
 
-	return function () {
-		passengerCount++;
-		console.log(`${passengerCount} passengers`);
-	};
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
 };
 
 const booker = secureBooking();

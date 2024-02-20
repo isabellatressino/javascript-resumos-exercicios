@@ -1,2 +1,2 @@
-# javascript-resumos-exercicios
+# JavaScript
  

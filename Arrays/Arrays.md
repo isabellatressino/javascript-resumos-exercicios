@@ -15,20 +15,25 @@ São estruturas de dados no qual podemos armazenar variáveis e acessá-las.
 
 ## Métodos que retornam um novo array, sem alterar o orignal
 
-|      Método       |                 Descrição                 |
-| :---------------: | :---------------------------------------: |
-| arr1.concat(arr2) |           concatena dois arrays           |
-| slice(start,end)  |       extrai um pedaço de um array        |
-|  join(separator)  | concatena todo os elementos em uma string |
+|       Método        |                                   Descrição                                    |
+| :-----------------: | :----------------------------------------------------------------------------: |
+|  arr1.concat(arr2)  |                             concatena dois arrays                              |
+|  slice(start,end)   |                          extrai um pedaço de um array                          |
+|   join(separator)   |                   concatena todo os elementos em uma string                    |
+|     flat(depth)     |    concatena os arrays em uma única camada até a profundicade especificada     |
+| flatMap(callbackFn) | combinação de map e flat. mapeia cada elemento e concatena em uma unica camada |
 
 ## Métodos de consulta
 
-|      Método       |                           Descrição                           |
-| :---------------: | :-----------------------------------------------------------: |
-|     at(index)     |           retorna o elemento no índice especificado           |
-|      length       |                retorna o comprimento do array                 |
-| indexOf(element)  |                  mostra o índice do elemento                  |
-| includes(element) | retorna uma valor booleano se o elemento está ou não no array |
+|      Método       |                                                                       Descrição                                                                       |
+| :---------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+|     at(index)     |                                                       retorna o elemento no índice especificado                                                       |
+|      length       |                                                            retorna o comprimento do array                                                             |
+| indexOf(element)  |                  Retorna o primeiro índice no qual o elemento especificado é encontrado no array. Se não for encontrado, retorna -1.                  |
+| includes(element) |                                 Retorna um valor booleano indicando se o array contém ou não o elemento especificado.                                 |
+| some(callbackFn)  |        Retorna true se pelo menos um elemento no array satisfizer a condição fornecida pela função de callback. Caso contrário, retorna false.        |
+| every(callbackFn) |         Retorna true se todos os elementos no array satisfizerem a condição fornecida pela função de callback. Caso contrário, retorna false.         |
+| find(callbackFn)  | Retorna o primeiro elemento no array que satisfaz a condição fornecida pela função de callback. Se nenhum elemento for encontrado, retorna undefined. |
 
 ## Métodos importantes
 
